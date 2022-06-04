@@ -17,7 +17,8 @@
 
         <div class="info_block_tovar">
             <h1>От {{ $product->price }}  ₽</h1><br>
-            <button class="form_button">
+            <a href="{{ route('products.basket', $product) }}">В корзину</a>
+{{--            <button class="form_button" type="submit" action="{{ route('products/basket', $product) }}">--}}
             В корзину</button>
             <br><br><br>
             <p>Характеристики:<br><br>
@@ -46,3 +47,4 @@
 
 </main>
 @endsection
+

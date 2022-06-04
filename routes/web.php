@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BasketController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -34,8 +35,9 @@ Route::controller(AdminProductController::class)->group(function (){
     Route::get('/product/{product}', 'single')->name('product.single');
     Route::get('/products', 'index')->name('admin-product');
     Route::get('/products/{product}/delete', 'destroy')->name('admin-product-destroy');
+    Route::get('/products/create', 'create')->name('admin-product-create');
+    Route::post('/products/create', 'store');
 });
-
 
 Route::controller(AdminCategoryController::class)->group(function (){
     Route::get('/category', 'index')->name('admin-category');
@@ -43,3 +45,8 @@ Route::controller(AdminCategoryController::class)->group(function (){
     Route::get('/category/{category}/delete', 'destroy')->name('admin-category-destroy');
     Route::post('/category/create', 'store');
 });
+
+Route::controller(BasketController::class)->group(function (){
+    Route::get('/products/{product}/basket', 'store')->name('products.basket');
+});
+

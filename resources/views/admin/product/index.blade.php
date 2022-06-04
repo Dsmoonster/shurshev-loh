@@ -6,7 +6,7 @@
         <h1>Список Товаров</h1>
 
         <div>
-{{--            <a href="{{ route('admin-product-create') }}" class="btn btn btn-success">Добавить товар</a>--}}
+<a href="{{ route('admin-product-create') }}" class="btn btn btn-success">Добавить товар</a>
         </div>
     </div>
     <div>

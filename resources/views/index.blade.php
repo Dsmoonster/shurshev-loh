@@ -40,20 +40,25 @@
             </div>
         </div>
         <!-- categoria -->
+
         <div class="categoria_block">
+            <form action="">
             <h2>Выберите автомобиль:</h2>
             <div class="cat_pod">
-                <select>
-
+                <label for="">
+                <select name="category">
                     <option value="0"> -- Выберите автомобиль --</option>
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}"
                                 @if(request()->get('category') == $category->id) selected @endif>{{ $category->name }}</option>
                     @endforeach
+                </label>
                 </select>
                 <button>Показать</button>
             </div>
+        </form>
         </div>
+
         <!-- Tovars -->
 
         <div class="tovar_block">
