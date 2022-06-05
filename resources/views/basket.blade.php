@@ -1,6 +1,6 @@
 @extends('layouts/main')
 @section('content')
-    <link rel="stylesheet" href="public/css/adress.css">
+    <link rel="stylesheet" href="{{ asset('css/adress.css') }}">
     <main>
                     <div class="lkb">
                          <div class="menu">

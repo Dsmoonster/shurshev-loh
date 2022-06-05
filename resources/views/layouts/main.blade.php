@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('public/css/style.css') }}">
-{{--    <link rel="stylesheet" href="public/css/oplata.css">--}}
-{{--    <link rel="stylesheet" href="public/css/lkb.css">--}}
-{{--    <link rel="stylesheet" href="public/css/adress.css">--}}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>AUTOGET</title>
 </head>
 <body>
@@ -39,7 +36,7 @@
         </div>
         </div>
         <a class="logo_index" href="{{ route('home') }}">
-            <img src="public/img/logo 1.png">
+            <img src="{{ asset('img/logo 1.png') }}">
         </a>
         <a href="{{ route('basket') }}"></a>
     </div>
@@ -62,7 +59,6 @@
         <h1>Наши контакты</h1><br>
         <p>+7(999)164 39 92</p>
         <p>autoget@mail.com</p>
-
     </div>
 </footer>
 </body>

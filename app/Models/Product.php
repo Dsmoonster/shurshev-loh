@@ -23,6 +23,6 @@ class Product extends Model
 
     public function getImagePathAttribute()
     {
-        return asset('public' . Storage::url($this->images()->get()->first()['image_path']));
+        return asset(Storage::url($this->images()->get()->first()['image_path']));
     }
 }

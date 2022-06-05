@@ -4,7 +4,7 @@
         <!-- info_block -->
         <div class="info_block">
             <a class="logo_index" href="{{ route('home') }}">
-                <img src="public/img/logo 1.png">
+                <img src="{{ asset('img/logo 1.png') }}">
             </a>
             <div class="time">
                 <p>8(999) 164 3992</p><br>
@@ -12,7 +12,7 @@
                     пн-вс 7:00 - 23:00 мск</p>
             </div>
             <div class="korzina">
-                <a href="{{ route('basket') }}"><img src="public/img/icons8-корзина-48 1.png"></a>
+                <a href="{{ route('basket') }}"><img src="{{ asset('img/icons8-корзина-48 1.png') }}"></a>
                 <a href="{{ route('basket') }}">Моя корзина</a>
             </div>
         </div>
@@ -32,9 +32,9 @@
 
                 <div class="adaptivny-slayder-lasekun">
                     <div class="abusteku-deagulus">
-                        <img src="public/img/Без имени-2.jpg"/>
-                        <img src="public/img/Без имени-3.jpg"/>
-                        <img src="public/img/Без имени-4.jpg"/>
+                        <img src="{{ asset('img/Без имени-2.jpg') }}"/>
+                        <img src="{{ asset('img/Без имени-3.jpg') }}"/>
+                        <img src="{{ asset('img/Без имени-4.jpg') }}"/>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
 
             <div class="tovar">
                 <img src="{{ $product->image_path }}" width="278px" height="280px">
-                <h1>{{ $product->price }}</h1>
+                <h1>{{ $product->name }}</h1>
                 <p></p>
                 <div class="info_tovar">
                     <p class="code">Код товара:<br>{{ $product->id }}</p>
@@ -75,13 +75,12 @@
             </div>
             @endforeach
 
-
         </div>
         <button class="bt_load">Загрузить еще...</button>
         <!-- О нас -->
         <div class="onas_block">
             <div class="onas">
-                <img src="public/img/icons8-гарантия-100.png" width="60px">
+                <img src="{{ asset('img/icons8-гарантия-100.png') }}" width="60px">
                 <h1>Гарантия</h1>
                 <p>
                     Мы даем гарантию <br>
@@ -89,7 +88,7 @@
                     на весь ассортимент!</p>
             </div>
             <div class="onas">
-                <img src="public/img/icons8-доставляется-50.png">
+                <img src="{{ asset('img/icons8-доставляется-50.png') }}">
                 <h1>Быстрая доставка</h1>
                 <p>
                     Бережно доставляем товары
@@ -97,7 +96,7 @@
                     в кратчайшие сроки</p>
             </div>
             <div class="onas">
-                <img src="public/img/icons8-онлайн-поддержка-50.png">
+                <img src="{{ asset('img/icons8-онлайн-поддержка-50.png') }}">
                 <h1>Поддержка 24/7</h1>
                 <p>
                     Наша тех.поддержка

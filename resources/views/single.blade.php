@@ -1,13 +1,13 @@
 @extends('layouts/main')
 @section('content')
-    <link rel="stylesheet" href="{{ asset('public/css/object.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/object.css') }}">
 
     <main>
     <p class="naz">{{ $product->name }}</p>
     <div class="object">
         <div class="photo">
             @foreach($product->images as $image)
-            <img src="{{ asset('public' . Storage::url($image->image_path)) }}" width="70px" height="70px"><BR>
+            <img src="{{ asset(Storage::url($image->image_path)) }}" width="70px" height="70px"><BR>
             @endforeach
         </div>
         <div class="photo_block">
@@ -17,7 +17,6 @@
         <div class="info_block_tovar">
             <h1>От {{ $product->price }}  ₽</h1><br>
             <a href="{{ route('products.basket', $product) }}">В корзину</a>
-{{--            <button class="form_button" type="submit" action="{{ route('products/basket', $product) }}">--}}
             В корзину</button>
             <br><br><br>
             <p>Характеристики:<br><br>
