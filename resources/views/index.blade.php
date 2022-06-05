@@ -62,7 +62,7 @@
         <!-- Tovars -->
 
         <div class="tovar_block">
-            @foreach($products as $product)
+            @forelse($products as $product)
 
             <div class="tovar">
                 <img src="{{ $product->image_path }}" width="278px" height="280px">
@@ -73,7 +73,11 @@
                     <a href="{{ route('product.single', $product) }}" class="bt_load">Подробнее</a>
                 </div>
             </div>
-            @endforeach
+            @empty
+                <h2>Товаров нет(</h2>
+            @endforelse
+
+            {{ $products }}
 
         </div>
         <button class="bt_load">Загрузить еще...</button>

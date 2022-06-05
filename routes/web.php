@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BasketController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -28,7 +29,7 @@ Route::controller(PageController::class)->group(function (){
     Route::get('/dostavka', 'dostavka')->name('dostavka');
     Route::get('/adress', 'adress')->name('adress');
     Route::get('/garant', 'garant')->name('garant');
-    Route::get('/lkb' , 'lkv')->name('lkb');
+    Route::get('/lkb' , 'lkb')->name('lkb');
 });
 
 Route::controller(AuthController::class)->group(function (){
@@ -58,5 +59,9 @@ Route::controller(BasketController::class)->middleware('auth')->group(function (
     Route::get('/products/{product}/basket', 'store')->name('products.basket');
     Route::get('/{product}/delete', 'destroy')->name('products-basket-destroy');
     Route::get('/basket', 'index')->name('basket');
+});
+
+Route::controller(OrderController::class)->group(function(){
+    Route::post('/basket/order', 'store')->name('create-order');
 });
 
