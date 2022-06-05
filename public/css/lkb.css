@@ -5,13 +5,13 @@
 }
 @font-face{
     font-family: 'OfficinaSansC-Book';
-    src: url(../../public/fonts/OfficinaSansC-Book.otf);
+    src: url(../fonts/OfficinaSansC-Book.otf);
 }
 header{
     font-family: 'OfficinaSansC-Book';
     max-width: 1920px;
-    padding: 0 15px;
-    margin: 0 auto;
+    padding: 0 15px;  
+    margin: 0 auto; 
     height: 50px;
     background-color: #EBE7E7;
     display: flex;
@@ -27,7 +27,7 @@ nav{
     margin: 0 auto 30px;
   }
   ul {
-    list-style: none;
+    list-style: none; 
     margin: 0;
     padding: 0;
   }
@@ -81,7 +81,7 @@ nav{
     color: white;
   }
 header a{
-
+   
     font-size: 20px;
     padding-left: 20px;
 }
@@ -97,8 +97,8 @@ header a{
 /* info block */
 .info_block{
     max-width: 1920px;
-    padding: 0 15px;
-    margin: 0 auto;
+    padding: 0 15px;  
+    margin: 0 auto; 
     height: 120px;
     display: flex;
     align-items: center;
@@ -106,7 +106,7 @@ header a{
 .korzina{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
 }
 .korzina a{
     font-size: 20px;
@@ -128,8 +128,8 @@ header a{
 /* search block */
 .search_block{
     max-width: 1920px;
-    padding: 0 15px;
-    margin: 0 auto;
+    padding: 0 15px;  
+    margin: 0 auto; 
     height: 50px;
     background-color: #39A2F7;
     display: flex;
@@ -323,7 +323,7 @@ footer{
     }
     .nav_block a{
         display: none;
-    }
+    } 
     nav{
         /* border: 1px solid black; */
         display: flex;
@@ -331,7 +331,7 @@ footer{
         margin-top: 20px;
       }
       ul {
-        list-style: none;
+        list-style: none; 
         margin: 0;
         padding: 0;
       }

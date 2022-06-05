@@ -24,6 +24,10 @@ Route::controller(PageController::class)->group(function (){
     Route::get('/register', 'register')->name('register');
     Route::get('/login', 'login')->name('login');
     Route::get('/basket', 'basket')->name('basket');
+    Route::get('/oplata', 'oplata')->name('oplata');
+    Route::get('/dostavka', 'dostavka')->name('dostavka');
+    Route::get('/adress', 'adress')->name('adress');
+    Route::get('/garant', 'garant')->name('garant');
 });
 
 Route::controller(AuthController::class)->group(function (){

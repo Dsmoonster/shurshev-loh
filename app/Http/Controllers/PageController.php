@@ -52,4 +52,24 @@ class PageController extends Controller
     {
         return view('basket');
     }
+
+    public function oplata()
+    {
+        return view('oplata');
+    }
+
+    public function adress()
+    {
+        return view('adress');
+    }
+
+    public function dostavka()
+    {
+        return view('dostavka');
+    }
+
+    public function garant()
+    {
+        return view('garant');
+    }
 }

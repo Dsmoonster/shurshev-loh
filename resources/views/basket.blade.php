@@ -5,7 +5,7 @@
                     <div class="lkb">
                          <div class="menu">
                              <button onclick="window.location.href = 'lkb.html'">Личные данные</button>
-                             <button onclick="window.location.href = 'adress.html'">Мои заказы</button>
+                             <button onclick="window.location.href = 'adress.blade.php'">Мои заказы</button>
                              <button onclick="window.location.href = 'index.html'">История заказов</button>
                              <button onclick="window.location.href = 'korzina.html'">Корзина</button><br><br>
                              <button class="exit_button" onclick="window.location.href = 'index.html'">Выход</button>

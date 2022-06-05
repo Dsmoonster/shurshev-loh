@@ -45,15 +45,15 @@
 <footer>
     <div class="info">
         <h1>Навигация</h1><br>
-        <a href="oplata.html">Оплата</a><br>
+        <a href="#">Оплата</a><br>
         <a href="#">Контакты</a><br>
         <a href="#">Доставка</a><br>
     </div>
     <div class="info_block_f">
         <h1>Помощь</h1><br>
-        <a href="oplata.html">Условия оплаты</a><br>
-        <a href="dostavka.html">Условия доставки</a><br>
-        <a href="garant.html">Гарантия на товар</a>
+        <a href="{{route('oplata')}}">Условия оплаты</a><br>
+        <a href="{{ route('dostavka') }}">Условия доставки</a><br>
+        <a href="{{ route('garant') }}">Гарантия на товар</a>
     </div>
     <div class="info_block_f">
         <h1>Наши контакты</h1><br>
