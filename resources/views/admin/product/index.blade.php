@@ -21,6 +21,7 @@
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->name }}</td>
                     <td>
+                        <a href="{{ route('admin-product-edit', $product) }}" class="btn btn-danger" >Редактировать</a>
                         <a href="{{ route('admin-product-destroy', $product) }}" class="btn btn-danger" >Удалить</a>
                     </td>
                 </tr>

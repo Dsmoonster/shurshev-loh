@@ -6,13 +6,12 @@
     <p class="naz">{{ $product->name }}</p>
     <div class="object">
         <div class="photo">
-            <img src="public/img/test.jpeg" width="70px" height="70px"><br>
-            <img src="public/img/test.jpeg" width="70px" height="70px"><BR>
-            <img src="public/img/test.jpeg" width="70px" height="70px"><BR>
-            <img src="public/img/test.jpeg" width="70px" height="70px">
+            @foreach($product->images as $image)
+            <img src="{{ asset('public' . Storage::url($image->image_path)) }}" width="70px" height="70px"><BR>
+            @endforeach
         </div>
         <div class="photo_block">
-            <img src="" width="500px" height="400px">
+            <img src="{{ $product->image_path }}" width="500px" height="400px">
         </div>
 
         <div class="info_block_tovar">
@@ -28,7 +27,7 @@
                 может отличаться от цен в розничных магазинах</p>
             <br><br>
             <p class="pusto_block">Код товара:<br>
-                1231
+                {{ $product->id }}
             </p>
             <br><br>
             <button class="edit_button">Редактировать</button>

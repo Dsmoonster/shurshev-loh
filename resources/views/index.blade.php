@@ -3,7 +3,7 @@
     <main>
         <!-- info_block -->
         <div class="info_block">
-            <a class="logo_index" href="index.php">
+            <a class="logo_index" href="{{ route('home') }}">
                 <img src="public/img/logo 1.png">
             </a>
             <div class="time">
@@ -12,8 +12,8 @@
                     пн-вс 7:00 - 23:00 мск</p>
             </div>
             <div class="korzina">
-                <a href="#"><img src="public/img/icons8-корзина-48 1.png"></a>
-                <a href="#">Моя корзина</a>
+                <a href="{{ route('basket') }}"><img src="public/img/icons8-корзина-48 1.png"></a>
+                <a href="{{ route('basket') }}">Моя корзина</a>
             </div>
         </div>
         <!-- search -->
@@ -63,8 +63,9 @@
 
         <div class="tovar_block">
             @foreach($products as $product)
+
             <div class="tovar">
-                <img src="" width="278px" height="280px">
+                <img src="{{ $product->image_path }}" width="278px" height="280px">
                 <h1>{{ $product->price }}</h1>
                 <p></p>
                 <div class="info_tovar">

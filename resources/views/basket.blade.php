@@ -1,5 +1,7 @@
-
-                <main>
+@extends('layouts/main')
+@section('content')
+    <link rel="stylesheet" href="public/css/adress.css">
+    <main>
                     <div class="lkb">
                          <div class="menu">
                              <button onclick="window.location.href = 'lkb.html'">Личные данные</button>
@@ -13,42 +15,28 @@
                          <div class="info_zakaz">
 
                              <div class="info_zakaz_status">
+                                 @foreach($products as $product)
                                  <div class="dano">
-                                      <h2>Информация о заказе</h2><br>
-                                          <p class="kor_naz">Руль анатомический Lada Priora 2 (перфорация, кожа, цветная строчка) Россия</p><br>
-                                          <p class="code">Код товара:412321</p>
-                                 </div>
-                                 <!-- <div class="dano"><br><br><br>
-                                     <p>Текущий заказ:</p><br>
-                                     <p>Заказ отменен</p>
-                                 </div> -->
-                                 <div class="dano"><br><br><br>
-                                     <p>Сумма:</p><br>
-                                     <p>604 ₽</p>
-                                 </div>
-                                 <div class="dano"><br><br><br>
-                                     <button>Удалить</button>
-                                 </div>
 
-                             </div>
-                              <div class="info_zakaz_status">
-                                <div class="dano">
-                                    <h2>Информация о заказе</h2><br>
-                                        <p class="kor_naz">Руль анатомический Lada Priora 2 (перфорация, кожа, цветная строчка) Россия</p><br>
-                                        <p class="code">Код товара:412321</p>
-                               </div>
-                                 <!-- <div class="dano"><br><br><br>
-                                     <p>Текущий заказ:</p><br>
-                                     <p>Заказ отменен</p>
-                                 </div> -->
+                                      <h2>Информация о заказе</h2><br>
+                                         <img src="{{ $product->product->getImagePathAttribute() }}" width="150px" alt="">
+                                          <p class="kor_naz">{{ $product->product->name }}</p><br>
+                                          <p class="code">Код товара:{{ $product->product->id }}</p>
+                                 </div>
                                  <div class="dano"><br><br><br>
                                      <p>Сумма:</p><br>
-                                     <p>604 ₽</p>
+                                     <p>{{ $product->product->price }}</p>
                                  </div>
                                  <div class="dano"><br><br><br>
-                                     <button>Удалить</button>
+                                     <p>Колличество:</p><br>
+                                     <p>{{ $product->count }}</p>
                                  </div>
+                                 <div class="dano"><br><br><br>
+                                     <a href="{{ route('products-basket-destroy', $product) }}">Удалить</a>
+                                 </div>
+                                 @endforeach
                              </div>
+
                              <div class="info_zakaz_status">
                                 <div class="dano">
                                     <h2>Ваш адресс</h2><br>
@@ -70,25 +58,4 @@
                     </div>
 
          </main>
-         <footer>
-        <div class="info">
-            <h1>Навигация</h1><br>
-            <a href="oplata.html">Оплата</a><br>
-            <a href="#">Контакты</a><br>
-            <a href="#">Доставка</a><br>
-        </div>
-        <div class="info_block_f">
-            <h1>Помощь</h1><br>
-            <a href="oplata.html">Условия оплаты</a><br>
-            <a href="dostavka.html">Условия доставки</a><br>
-            <a href="garant.html">Гарантия на товар</a>
-               </div>
-        <div class="info_block_f">
-            <h1>Наши контакты</h1><br>
-            <p>+7(999)164 39 92</p>
-        <p>autoget@mail.com</p>
-
-        </div>
-    </footer>
-</body>
-</html>
+@endsection

@@ -3,12 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Basket;
+use App\Models\Categories;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class BasketController extends Controller
 {
+    public function index()
+    {
+        return view('basket',[
+            'products' => Auth::user()->baskets
+        ]);
+    }
+
     public function store(Product $product, Request $request)
     {
         $basket = Basket::query()
@@ -26,5 +34,13 @@ class BasketController extends Controller
             ]);
         }
         return redirect()->back();
+    }
+
+    public function destroy(Basket $product)
+    {
+
+        $product->delete();
+
+        return redirect(route('basket'));
     }
 }

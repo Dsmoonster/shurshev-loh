@@ -41,7 +41,7 @@
         <a class="logo_index" href="{{ route('home') }}">
             <img src="public/img/logo 1.png">
         </a>
-        <a href="#"><img class="korz" src="public/img/icons8-корзина-48 1.png"></a>
+        <a href="{{ route('basket') }}"></a>
     </div>
 </header>
 @yield('content')

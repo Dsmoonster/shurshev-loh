@@ -23,6 +23,7 @@ Route::controller(PageController::class)->group(function (){
     Route::get('/', 'index')->name('home');
     Route::get('/register', 'register')->name('register');
     Route::get('/login', 'login')->name('login');
+    Route::get('/basket', 'basket')->name('basket');
 });
 
 Route::controller(AuthController::class)->group(function (){
@@ -37,6 +38,8 @@ Route::controller(AdminProductController::class)->group(function (){
     Route::get('/products/{product}/delete', 'destroy')->name('admin-product-destroy');
     Route::get('/products/create', 'create')->name('admin-product-create');
     Route::post('/products/create', 'store');
+    Route::get('/product/{product}/update', 'edit')->name('admin-product-edit');
+    Route::post('/product/{product}/update', 'update');
 });
 
 Route::controller(AdminCategoryController::class)->group(function (){
@@ -46,7 +49,9 @@ Route::controller(AdminCategoryController::class)->group(function (){
     Route::post('/category/create', 'store');
 });
 
-Route::controller(BasketController::class)->group(function (){
+Route::controller(BasketController::class)->middleware('auth')->group(function (){
     Route::get('/products/{product}/basket', 'store')->name('products.basket');
+    Route::get('/{product}/delete', 'destroy')->name('products-basket-destroy');
+    Route::get('/basket', 'index')->name('basket');
 });
 
