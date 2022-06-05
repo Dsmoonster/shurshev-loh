@@ -3,13 +3,11 @@
     <link rel="stylesheet" href="{{ asset('css/adress.css') }}">
     <main>
                     <div class="lkb">
-                         <div class="menu">
-                             <button onclick="window.location.href = 'lkb.html'">Личные данные</button>
-                             <button onclick="window.location.href = 'adress.blade.php'">Мои заказы</button>
-                             <button onclick="window.location.href = 'index.html'">История заказов</button>
-                             <button onclick="window.location.href = 'korzina.html'">Корзина</button><br><br>
-                             <button class="exit_button" onclick="window.location.href = 'index.html'">Выход</button>
-                         </div>
+                        <div class="menu">
+                            <button onclick="window.location.href = '{{ route('lkb') }}'">Личные данные</button>
+                            <button onclick="window.location.href = '{{ route('adress') }}'">Мои заказы</button>
+                            <button onclick="window.location.href = '{{ route('basket') }}'">Корзина</button><br><br>
+                        </div>
                      <div class="info_lkb">
                          <p class="zakaz_up">Моя корзина</p>
                          <div class="info_zakaz">

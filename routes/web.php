@@ -28,6 +28,7 @@ Route::controller(PageController::class)->group(function (){
     Route::get('/dostavka', 'dostavka')->name('dostavka');
     Route::get('/adress', 'adress')->name('adress');
     Route::get('/garant', 'garant')->name('garant');
+    Route::get('/lkb' , 'lkv')->name('lkb');
 });
 
 Route::controller(AuthController::class)->group(function (){

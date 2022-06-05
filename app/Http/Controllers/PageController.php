@@ -72,4 +72,9 @@ class PageController extends Controller
     {
         return view('garant');
     }
+
+    public function lkb()
+    {
+        return view('lkb');
+    }
 }

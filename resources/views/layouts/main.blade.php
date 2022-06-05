@@ -15,9 +15,9 @@
         <div class="nav_block">
             <a href="{{ route('home') }}">Новости</a>
             <a href="#">Акции</a>
-            <a href="oplata.html">Оплата</a>
+            <a href="{{route('oplata')}}">Оплата</a>
             <a href="#">Контакты</a>
-            <a href="dostavka.html">Доставка</a>
+            <a href="{{ route('dostavka') }}">Доставка</a>
         </div>
         <div class="user-btn">
             @guest()
@@ -45,9 +45,9 @@
 <footer>
     <div class="info">
         <h1>Навигация</h1><br>
-        <a href="#">Оплата</a><br>
+        <a href="{{route('oplata')}}">Оплата</a><br>
         <a href="#">Контакты</a><br>
-        <a href="#">Доставка</a><br>
+        <a href="{{ route('dostavka') }}">Доставка</a><br>
     </div>
     <div class="info_block_f">
         <h1>Помощь</h1><br>

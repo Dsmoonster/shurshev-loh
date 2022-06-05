@@ -4,11 +4,9 @@
     <main>
                <div class="lkb">
                     <div class="menu">
-                        <button onclick="window.location.href = 'lkb.php'">Личные данные</button>
+                        <button onclick="window.location.href = '{{ route('lkb') }}'">Личные данные</button>
                         <button onclick="window.location.href = '{{ route('adress') }}'">Мои заказы</button>
-                        <button onclick="window.location.href = 'index.php'">История заказов</button>
                         <button onclick="window.location.href = '{{ route('basket') }}'">Корзина</button><br><br>
-                        <button class="exit_button" onclick="window.location.href = '?do=exit'">Выход</button>
                     </div>
                 <div class="info_lkb">
                     <h1><?php echo $_SESSION['user']['name']; echo $_SESSION['user']['surname']?></h1><br>

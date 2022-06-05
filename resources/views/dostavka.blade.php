@@ -1,13 +1,14 @@
 @extends('layouts/main')
 @section('content')
-                <main>
+    <link rel="stylesheet" href="{{ asset('css/oplata.css') }}">
+
+    <main>
                     <div class="lkb">
                         <div class="menu">
                             <button onclick="window.location.href = '{{ route('oplata') }}'">Оплата</button>
                             <button onclick="window.location.href = '{{ route('dostavka') }}'">Условия доставки</button>
                             <button onclick="window.location.href = '{{ route('garant') }}'">Гарантия на товар</button>
                             <button onclick="window.location.href = '{{ route('lkb') }}'">Личный кабинет</button><br><br>
-                            <button class="exit_button" onclick="window.location.href = 'index.html'">Выход</button>
                         </div>
                     <div class="info_lkb">
 
