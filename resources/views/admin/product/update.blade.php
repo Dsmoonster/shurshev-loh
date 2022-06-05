@@ -10,9 +10,9 @@
                 <input type="text" name="price" placeholder="Цена" value="{{ old('price', $product->price) }}"><br>
                 <textarea name="content" id="" cols="30" rows="10" placeholder="Характеристики">{{ old('content', $product->content) }}</textarea>
                 <select name="category_id">
-{{--                    @foreach($categories as $category)--}}
-{{--                        <option value="{{ $category->id }}" @if($category->id == old('category_id')) selected @endif>{{ $category->name }}</option>--}}
-{{--                    @endforeach--}}
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}" @if($category->id == old('category_id')) selected @endif>{{ $category->name }}</option>
+                    @endforeach
                 </select>
                 <input class="sub_bt" type="file" name="files[]" multiple>
                 <input class="sub_bt" type="submit" name="reg" value="Создать">

@@ -71,6 +71,7 @@ class AdminProductController extends Controller
     {
         return view('admin/product/update',[
             'product' => $product,
+            'categories' => Categories::all()
         ]);
     }
 
