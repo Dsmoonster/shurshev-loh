@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'OfficinaSansC-Book';
-    src: url(../fonts/OfficinaSansC-Book.otf);
+    src: url(../../public/fonts/OfficinaSansC-Book.otf);
 }
 
 header {

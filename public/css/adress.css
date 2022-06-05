@@ -5,13 +5,13 @@
 }
 @font-face{
     font-family: 'OfficinaSansC-Book';
-    src: url(../fonts/OfficinaSansC-Book.otf);
+    src: url(../../public/fonts/OfficinaSansC-Book.otf);
 }
 header{
     font-family: 'OfficinaSansC-Book';
     max-width: 1920px;
-    padding: 0 15px;  
-    margin: 0 auto; 
+    padding: 0 15px;
+    margin: 0 auto;
     height: 50px;
     background-color: #EBE7E7;
     display: flex;
@@ -28,7 +28,7 @@ nav{
     margin: 0 auto 30px;
   }
   ul {
-    list-style: none; 
+    list-style: none;
     margin: 0;
     padding: 0;
   }
@@ -82,7 +82,7 @@ nav{
     color: white;
   }
 header a{
-   
+
     font-size: 20px;
     padding-left: 20px;
 }
@@ -101,8 +101,8 @@ header a{
 }
 .info_block{
     max-width: 1920px;
-    padding: 0 15px;  
-    margin: 0 auto; 
+    padding: 0 15px;
+    margin: 0 auto;
     height: 120px;
     display: flex;
     align-items: center;
@@ -110,7 +110,7 @@ header a{
 .korzina{
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 .korzina a{
     font-size: 20px;
@@ -129,8 +129,8 @@ header a{
 /* search block */
 .search_block{
     max-width: 1920px;
-    padding: 0 15px;  
-    margin: 0 auto; 
+    padding: 0 15px;
+    margin: 0 auto;
     height: 50px;
     background-color: #39A2F7;
     display: flex;
@@ -229,7 +229,7 @@ main{
     transition: all 0.5s;
 }
 .dano button:hover{
-    
+
     background-color: none;
     background-color: #b82222;
     color: white;
@@ -242,7 +242,7 @@ main{
 .dano{
     font-family: 'OfficinaSansC-Book';
     padding-bottom: 30px;
-    
+
 }
 .dano p{
     font-size: 15px;
@@ -408,7 +408,7 @@ footer{
     }
     .nav_block a{
         display: none;
-    } 
+    }
     nav{
         /* border: 1px solid black; */
         display: flex;
@@ -416,7 +416,7 @@ footer{
         margin-top: 20px;
       }
       ul {
-        list-style: none; 
+        list-style: none;
         margin: 0;
         padding: 0;
       }
