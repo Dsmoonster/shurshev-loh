@@ -32,9 +32,9 @@
 
                 <div class="adaptivny-slayder-lasekun">
                     <div class="abusteku-deagulus">
-                        <img src="{{ asset('img/Без имени-2.jpg') }}"/>
-                        <img src="{{ asset('img/Без имени-3.jpg') }}"/>
-                        <img src="{{ asset('img/Без имени-4.jpg') }}"/>
+                        <img src="{{ asset('img/Без имени-2.jpg') }}" />
+                        <img src="{{ asset('img/Без имени-3.jpg') }}" />
+                        <img src="{{ asset('img/Без имени-4.jpg') }}" />
                     </div>
                 </div>
             </div>
@@ -43,36 +43,35 @@
 
         <div class="categoria_block">
             <form action="">
-            <h2>Выберите автомобиль:</h2>
-            <div class="cat_pod">
-                <label for="">
-                <select name="category">
-                    <option value="0"> -- Выберите автомобиль --</option>
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}"
-                                @if(request()->get('category') == $category->id) selected @endif>{{ $category->name }}</option>
-                    @endforeach
-                </label>
-                </select>
-                <button>Показать</button>
-            </div>
-        </form>
+                <h2>Выберите автомобиль:</h2>
+                <div class="cat_pod">
+                    <label for="">
+                        <select name="category">
+                            <option value="0"> -- Выберите автомобиль --</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}" @if (request()->get('category') == $category->id) selected @endif>
+                                    {{ $category->name }}</option>
+                            @endforeach
+                    </label>
+                    </select>
+                    <button>Показать</button>
+                </div>
+            </form>
         </div>
 
         <!-- Tovars -->
 
         <div class="tovar_block">
             @forelse($products as $product)
-
-            <div class="tovar">
-                <img src="{{ $product->image_path }}" width="278px" height="280px">
-                <h1>{{ $product->name }}</h1>
-                <p></p>
-                <div class="info_tovar">
-                    <p class="code">Код товара:<br>{{ $product->id }}</p>
-                    <a href="{{ route('product.single', $product) }}" class="bt_load">Подробнее</a>
+                <div class="tovar">
+                    <img src="{{ $product->image_path }}" width="278px" height="280px">
+                    <h1>{{ $product->name }}</h1>
+                    <p></p>
+                    <div class="info_tovar">
+                        <p class="code">Код товара:<br>{{ $product->id }}</p>
+                        <a href="{{ route('product.single', $product) }}" class="bt_load">Подробнее</a>
+                    </div>
                 </div>
-            </div>
             @empty
                 <h2>Товаров нет(</h2>
             @endforelse
@@ -115,39 +114,19 @@
                     <h1>Отзывы</h1>
                     <div class="sectionesag"></div>
                     <div class="sagestim-lonials">
-                        <div class="vemotau-vokusipol">
-                            <div class="testimonial">
-                                <img src="http://zornet.ru/_fr/83/7890600.jpg" alt="">
-                                <div class="gecedanam">Антон Попов</div>
-                                <div class="apogered-gselected">
+                        @foreach ($reviews as $review)
+                            <div class="vemotau-vokusipol">
+                                <div class="testimonial">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png"
+                                        alt="{{ $review->full_name }}">
+                                    <div class="gecedanam">{{ $review->full_name }}</div>
+                                    <div class="apogered-gselected">
+                                    </div>
+
+                                    <p>{{ $review->content }}</p>
                                 </div>
-
-                                <p>Здесь первое описание. Продолжение.</p>
                             </div>
-                        </div>
-
-                        <div class="vemotau-vokusipol">
-                            <div class="testimonial">
-                                <img src="http://zornet.ru/_fr/83/2047084.jpg" alt="">
-                                <div class="gecedanam">Дмитрий Атрохов</div>
-                                <div class="apogered-gselected">
-                                </div>
-
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, error.</p>
-                            </div>
-                        </div>
-
-                        <div class="vemotau-vokusipol">
-                            <div class="testimonial">
-                                <img src="http://zornet.ru/_fr/83/5640570.jpg" alt="">
-                                <div class="gecedanam">Каспер Волков</div>
-
-
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi necessitatibus
-                                    adipisci quas modi laboriosam consequatur nemo quia aspernatur facilis officiis?
-                                </p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

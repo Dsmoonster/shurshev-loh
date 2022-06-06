@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categories;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,8 +33,8 @@ class PageController extends Controller
         return view('index', [
             'products' => $query->paginate(5),
             'categories' => Categories::all(),
+            'reviews' => Review::all()
         ]);
-
     }
 
     public function register()

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('apartment')->nullable();
             $table->foreignId('user_id')->constrained('users');
             $table->integer('price')->unsigned();
+            $table->enum('status', ['pending', 'canceled', 'success'])->default('pending');
             $table->timestamps();
         });
     }

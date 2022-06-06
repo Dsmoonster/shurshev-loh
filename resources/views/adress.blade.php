@@ -14,8 +14,9 @@
             </div>
             <div class="info_lkb">
                 <div class="info_zakaz">
-                    @foreach($orders as $order)
-                        <p class="zakaz_up">Мой заказ №{{ $order->id }}, создан {{ $order->created_at->format('d.m.Y') }}</p><br>
+                    @foreach ($orders as $order)
+                        <p class="zakaz_up">Мой заказ №{{ $order->id }}, создан
+                            {{ $order->created_at->format('d.m.Y') }}</p><br>
                         <div class="info_zakaz_status">
                             <div class="dano">
                                 <h2>Информация о заказе</h2><br>
@@ -24,7 +25,7 @@
                             </div>
                             <div class="dano"><br><br><br>
                                 <p>Текущий заказ:</p><br>
-                                <p>В обработке</p>
+                                <p>{{ $order->order_status }}</p>
                             </div>
                             <div class="dano"><br><br><br>
                                 <p>Сумма:</p><br>

@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Validator;
 
 class OrderController extends Controller
 {
-    public function store(Request $request){
+    public function store(Request $request)
+    {
 
         Validator::make($request->all(), [
             'city' => 'required|max:255',
@@ -33,7 +34,7 @@ class OrderController extends Controller
 
         Basket::query()->where('user_id', Auth::user()->id)->delete();
 
-        foreach ($basket as $product){
+        foreach ($basket as $product) {
             OrderedProduct::query()->create([
                 'order_id' => $order->id,
                 'product_id' => $product->product_id,
@@ -41,7 +42,31 @@ class OrderController extends Controller
             ]);
         }
 
-
         return redirect()->route('home');
+    }
+
+    public function orders()
+    {
+        return view('admin.order', [
+            'orders' => Order::query()->orderByDesc('id')->get()
+        ]);
+    }
+
+    public function successOrder(Order $order)
+    {
+        $order->update([
+            'status' => 'success',
+        ]);
+
+        return redirect(route('admin-orders'));
+    }
+
+    public function canceledOrder(Order $order)
+    {
+        $order->update([
+            'status' => 'canceled',
+        ]);
+
+        return redirect(route('admin-orders'));
     }
 }

@@ -883,6 +883,17 @@ input.sub_bt:hover{
     }
 }
 
+.nav-all {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
+.nav_all {
+  display: flex;
+  flex-direction: row;
+}
 
-
+.edit_button, .delete_button {
+  padding: 10px 20px;
+}
