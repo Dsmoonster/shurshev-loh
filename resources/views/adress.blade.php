@@ -10,7 +10,7 @@
                 <button onclick="window.location.href = '{{ route('garant') }}'">Гарантия на товар</button>
                 <button onclick="window.location.href = '{{ route('lkb') }}'">Личный кабинет</button>
                 <br><br>
-                <button class="exit_button" onclick="window.location.href = 'index.html'">Выход</button>
+                <button class="exit_button" onclick="window.location.href = '{{ route('logout') }}'">Выход</button>
             </div>
             <div class="info_lkb">
                 <div class="info_zakaz">

@@ -14,10 +14,8 @@
     <div class="nav-all">
         <div class="nav_all">
         <div class="nav_block">
-            <a href="{{ route('home') }}">Новости</a>
-            <a href="#">Акции</a>
+            <a href="{{ route('home') }}">Главная</a>
             <a href="{{route('oplata')}}">Оплата</a>
-            <a href="#">Контакты</a>
             <a href="{{ route('dostavka') }}">Доставка</a>
         </div>
         <div class="user-btn">
@@ -32,7 +30,8 @@
                 @endif
                 @endauth
             @auth()
-            <a href="{{ route('logout') }}">Выход</a>
+                    <a href="{{ route('lkb') }}">Личный кабинет</a>
+                    <a href="{{ route('logout') }}">Выход</a>
                 @endauth
         </div>
         </div>
@@ -47,7 +46,7 @@
     <div class="info">
         <h1>Навигация</h1><br>
         <a href="{{route('oplata')}}">Оплата</a><br>
-        <a href="#">Контакты</a><br>
+
         <a href="{{ route('dostavka') }}">Доставка</a><br>
     </div>
     <div class="info_block_f">
