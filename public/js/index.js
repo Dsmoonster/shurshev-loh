@@ -5,6 +5,7 @@ const basket = () => {
 
     const input = document.getElementById('priceInput')
     const total = document.getElementById('totalPrice');
+
     let TOTAL_PRICE = 0
 
     for (const item of price){

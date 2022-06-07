@@ -10,8 +10,8 @@
 header{
     font-family: 'OfficinaSansC-Book';
     max-width: 1920px;
-    padding: 0 15px;  
-    margin: 0 auto; 
+    padding: 0 15px;
+    margin: 0 auto;
     height: 50px;
     background-color: #EBE7E7;
     display: flex;
@@ -27,7 +27,7 @@ nav{
     margin: 0 auto 30px;
   }
   ul {
-    list-style: none; 
+    list-style: none;
     margin: 0;
     padding: 0;
   }
@@ -86,7 +86,7 @@ nav{
 
 
 header a{
-   
+
     font-size: 20px;
     padding-left: 20px;
 }
@@ -101,8 +101,8 @@ header a{
 /* info block */
 .info_block{
     max-width: 1920px;
-    padding: 0 15px;  
-    margin: 0 auto; 
+    padding: 0 15px;
+    margin: 0 auto;
     height: 120px;
     display: flex;
     align-items: center;
@@ -114,7 +114,7 @@ header a{
 .korzina{
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 .korzina a{
     font-size: 20px;
@@ -131,8 +131,8 @@ header a{
 }
 .search_block{
     max-width: 1920px;
-    padding: 0 15px;  
-    margin: 0 auto; 
+    padding: 0 15px;
+    margin: 0 auto;
     height: 50px;
     background-color: #39A2F7;
     display: flex;
@@ -149,8 +149,8 @@ header a{
 /* slaider block */
 /* .slaider_block{
     max-width: 1500px;
-    padding: 0 15px;  
-    margin: 0 auto; 
+    padding: 0 15px;
+    margin: 0 auto;
     margin-top: 30px;
     height: 500px;
     background-color: gray;
@@ -164,11 +164,11 @@ header a{
     margin: 20px auto;
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
   }
-  
+
   .adaptivny-slayder input[name="kadoves"] {
     display: none;
   }
-  
+
   .kadoves {
     position: absolute;
     left: 0;
@@ -176,7 +176,7 @@ header a{
     text-align: center;
     width: 100%;
   }
-  
+
   .kadoves label {
     display: inline-block;
     width: 10px;
@@ -188,44 +188,44 @@ header a{
     border: 5px solid #2f363c;
     background-color: #738290;
   }
-  
+
   #slaid1:checked~.kadoves label[for="slaid1"] {
     background-color: white;
   }
-  
+
   #slaid2:checked~.kadoves label[for="slaid2"] {
     background-color: white;
   }
-  
+
   #slaid3:checked~.kadoves label[for="slaid3"] {
     background-color: white;
   }
-  
+
   .adaptivny-slayder-lasekun {
     overflow: hidden;
-     
+
   }
-  
+
   .abusteku-deagulus {
     display: flex;
     width: 1500px;
     height: 400px;
     transition: all 0.5s;
   }
-  
+
   .abusteku-deagulus img {
     width: 100%;
     flex-shrink:0;
   }
-  
+
   #slaid1:checked~adaptivny-slayder-lasekun abusteku-deagulus {
     transform: translate(0);
   }
-  
+
   #slaid2:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
     transform: translateX(100%);
   }
-  
+
   #slaid3:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
     transform: translateX(-200%);
   }
@@ -234,7 +234,7 @@ header a{
 
 
 
-/* 
+/*
  .container_slider_css{margin:50px auto;max-width: 1500px;;height:400px;overflow:hidden;position:relative}
 .photo_slider_css{position:absolute;animation:round 16s infinite;opacity:0;width:100%; height: 100%; object-fit: cover;}
 @keyframes round {
@@ -254,8 +254,8 @@ img:nth-child(4){animation-delay:0}
 /* категория */
 .categoria_block{
     max-width: 1650px;
-    padding: 0 15px;  
-    margin: 0 auto; 
+    padding: 0 15px;
+    margin: 0 auto;
     text-align: center;
     margin-top: 50px;
 }
@@ -298,8 +298,8 @@ select{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin-top: 100px;
     max-width: 1600px;
-    padding: 0 15px;  
-     margin: 0 auto; 
+    padding: 0 15px;
+     margin: 0 auto;
      font-family: 'OfficinaSansC-Book';
 }
 .tovar{
@@ -350,7 +350,7 @@ select{
     justify-content: center;
     align-items: center;
     max-width: 300px;
-    padding: 0 15px;  
+    padding: 0 15px;
     /* margin: 0 auto; */
     height: 45px;
     margin-top: 15px;
@@ -371,7 +371,7 @@ select{
 /* ONAS */
 .onas_block{
     max-width: 1920px;
-    padding: 0 15px;  
+    padding: 0 15px;
     margin: 0 auto;
     height: 400px;
     background-color: #E5E3E3;
@@ -401,14 +401,14 @@ select{
     overflow: hidden;
     padding: 0 20px;
   }
-  
+
   .sectionesag {
     width: 195px;
     height: 3px;
     background: #39A2F7;
     margin: 23px auto;
   }
-  
+
   .sagestim-lonials{
     display: flex;
     flex-wrap: wrap;
@@ -507,15 +507,12 @@ input.sub_bt:hover{
   transition: all 0.5s;
 }
 
-
-
-
-
-
-
-  
-
-
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
   @media screen and (max-width:1400px) {
     .slaider_block{
@@ -535,14 +532,14 @@ input.sub_bt:hover{
     max-width: 80%;
   }
 }
-  
+
   @media (min-width:426px) and (max-width:768px) {
   .vemotau-vokusipol{
     flex: 100%;
     max-width: 100%;
   }
 }
-  
+
   /* tovar */
   @media screen and (max-width:1440px) {
     .tovar_block{
@@ -727,7 +724,7 @@ input.sub_bt:hover{
   }
   .nav_block a{
       display: none;
-  } 
+  }
   nav{
       /* border: 1px solid black; */
       display: flex;
@@ -735,7 +732,7 @@ input.sub_bt:hover{
       margin-top: 20px;
     }
     ul {
-      list-style: none; 
+      list-style: none;
       margin: 0;
       padding: 0;
     }

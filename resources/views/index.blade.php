@@ -32,9 +32,9 @@
 
                 <div class="adaptivny-slayder-lasekun">
                     <div class="abusteku-deagulus">
-                        <img src="{{ asset('img/Без имени-2.jpg') }}" />
-                        <img src="{{ asset('img/Без имени-3.jpg') }}" />
-                        <img src="{{ asset('img/Без имени-4.jpg') }}" />
+                        <img src="{{ asset('img/Без имени-2.jpg') }}"/>
+                        <img src="{{ asset('img/Без имени-3.jpg') }}"/>
+                        <img src="{{ asset('img/Без имени-4.jpg') }}"/>
                     </div>
                 </div>
             </div>
@@ -49,9 +49,10 @@
                         <select name="category">
                             <option value="0"> -- Выберите автомобиль --</option>
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}" @if (request()->get('category') == $category->id) selected @endif>
+                                <option value="{{ $category->id }}"
+                                        @if (request()->get('category') == $category->id) selected @endif>
                                     {{ $category->name }}</option>
-                            @endforeach
+                        @endforeach
                     </label>
                     </select>
                     <button>Показать</button>
@@ -112,13 +113,21 @@
             <div class="koguvcavis-varazdel">
                 <div class="sestim-donials">
                     <h1>Отзывы</h1>
-                    <div class="sectionesag"></div>
+                    @auth()
+                        <form action="{{ route('comment-create') }}" method="POST" class="form">
+                            @csrf
+                            <input type="text" name="full_name" class="input" placeholder="Имя"
+                                   value="{{ old('name') }}">
+                            <textarea name="text" placeholder="Текст комментария">{{ old('text') }}</textarea>
+                            <button class="button">Добавить</button>
+                        </form>
+                    @endauth
                     <div class="sagestim-lonials">
                         @foreach ($reviews as $review)
                             <div class="vemotau-vokusipol">
                                 <div class="testimonial">
                                     <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png"
-                                        alt="{{ $review->full_name }}">
+                                         alt="{{ $review->full_name }}">
                                     <div class="gecedanam">{{ $review->full_name }}</div>
                                     <div class="apogered-gselected">
                                     </div>
