@@ -21,7 +21,7 @@
                         <td>{{ $order->user->surname }} {{ $order->user->name }}</td>
                         <td>{{ $order->user->email }}</td>
                         <td>{{ $order->order_status }}</td>
-                        <td>{{ $order->city }}, {{ $order->street }}, {{ $order->house }} {{ $order->apartment }}</td>
+                        <td>{{ $order->city }}, {{ $order->street }}, {{ $order->house }} {{ '(' . $order->apartment . ' квартира)' }}</td>
                         <td>
                             <a href="{{ route('admin-order-canceled', $order) }}" class="btn btn-danger">Отклонить</a>
                             <a href="{{ route('admin-order-success', $order) }}" class="btn btn-danger">Завершить</a>
