@@ -12,7 +12,7 @@
           position: relative;
           height: 100%;
         }
-  
+
         body {
           background: #eee;
           font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -21,17 +21,17 @@
           margin: 0;
           padding: 0;
         }
-  
+
         .swiper {
           width: 100%;
           height: 100%;
         }
-  
+
         .swiper-slide {
           text-align: center;
           font-size: 18px;
           background: #fff;
-  
+
           /* Center slide text vertically */
           display: -webkit-box;
           display: -ms-flexbox;
@@ -46,33 +46,33 @@
           -webkit-align-items: center;
           align-items: center;
         }
-  
+
         .swiper-slide img {
           display: block;
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
-  
-  
+
+
         .swiper {
           width: 100%;
           height: 300px;
           margin-left: auto;
           margin-right: auto;
         }
-  
+
         .swiper-slide {
           background-size: cover;
           background-position: center;
         }
-  
+
         .mySwiper2 {
           height: 80%;
           width: 100%;
           max-width: 500px;
         }
-  
+
         .mySwiper {
           height: auto;
           box-sizing: border-box;
@@ -83,22 +83,28 @@
         .mySwiper .swiper-wrapper {
             width: auto;
         }
-  
+
         .mySwiper .swiper-slide {
           width: 180px;
           height: 120px;
           opacity: 0.4;
         }
-  
+
         .mySwiper .swiper-slide-thumb-active {
           opacity: 1;
         }
-  
+
         .swiper-slide img {
           display: block;
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+
+        @media screen and (max-width: 576px) {
+            .swiper.mySwiper {
+                display: none;
+            }
         }
       </style>
     <main>
@@ -128,7 +134,7 @@
 
                 </div>
             </div>
-{{-- 
+{{--
             <div class="photo">
 
             </div>
