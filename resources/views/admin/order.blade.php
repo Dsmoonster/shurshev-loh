@@ -3,11 +3,7 @@
 @section('content')
     <main>
         <div class="header-title flex fl-jc-sb ai">
-            <h1>Список Товаров</h1>
-
-            <div>
-                <a href="{{ route('admin-product-create') }}" class="btn btn btn-success">Добавить товар</a>
-            </div>
+            <h1>Список заказов</h1>
         </div>
         <div>
             <table>
