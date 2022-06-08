@@ -31,6 +31,8 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/adress', 'adress')->name('adress');
     Route::get('/garant', 'garant')->name('garant');
     Route::get('/lkb', 'lkb')->name('lkb');
+    Route::get('/products/all', 'products')->name('products');
+    Route::get('/reviews/all', 'reviews')->name('reviews');
 });
 
 Route::controller(AuthController::class)->group(function () {
@@ -71,6 +73,6 @@ Route::controller(OrderController::class)->group(function () {
     Route::get('/order/{order}/canceled', 'canceledOrder')->name('admin-order-canceled');
 });
 
-Route::controller(ReviewController::class)->group(function(){
+Route::controller(ReviewController::class)->group(function () {
     Route::post('/review/create', 'store')->name('comment-create');
 });

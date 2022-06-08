@@ -77,10 +77,14 @@
                 <h2>Товаров нет(</h2>
             @endforelse
 
-            {{ $products }}
+            {{--            {{ $products }}--}}
 
         </div>
-        <button class="bt_load">Загрузить еще...</button>
+
+        <div class="flex align-center justify-center">
+            <a class="button edit_button" href="{{ route('products') }}">Показать все</a>
+        </div>
+
         <!-- О нас -->
         <div class="onas_block">
             <div class="onas">
@@ -113,17 +117,8 @@
             <div class="koguvcavis-varazdel">
                 <div class="sestim-donials">
                     <h1>Отзывы</h1>
-                    @auth()
-                        <form action="{{ route('comment-create') }}" method="POST" class="form">
-                            @csrf
-                            <input type="text" name="full_name" class="input" placeholder="Имя"
-                                   value="{{ old('name') }}">
-                            <textarea name="text" placeholder="Текст комментария">{{ old('text') }}</textarea>
-                            <button class="button">Добавить</button>
-                        </form>
-                    @endauth
                     <div class="sagestim-lonials">
-                        @foreach ($reviews as $review)
+                        @forelse ($reviews as $review)
                             <div class="vemotau-vokusipol">
                                 <div class="testimonial">
                                     <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png"
@@ -135,8 +130,26 @@
                                     <p>{{ $review->content }}</p>
                                 </div>
                             </div>
-                        @endforeach
+                        @empty
+                            <p>На сайте пока нет отзывов</p>
+                        @endforelse
                     </div>
+
+                    <div class="flex align-center justify-center">
+                        <a href="{{ route('reviews') }}" class="button edit_button">
+                            Показать все отзывы
+                        </a>
+                    </div>
+
+{{--                    @auth()--}}
+{{--                        <form action="{{ route('comment-create') }}" method="POST" class="form">--}}
+{{--                            @csrf--}}
+{{--                            <input type="text" name="full_name" class="input" placeholder="Имя"--}}
+{{--                                   value="{{ old('name') }}">--}}
+{{--                            <textarea name="text" placeholder="Текст комментария">{{ old('text') }}</textarea>--}}
+{{--                            <button class="button edit_button">Добавить</button>--}}
+{{--                        </form>--}}
+{{--                    @endauth--}}
                 </div>
             </div>
         </div>

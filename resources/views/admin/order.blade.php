@@ -15,6 +15,7 @@
                 <th>Фамилия имя</th>
                 <th>Адрес электронной почты</th>
                 <th>Текущий статус заказа</th>
+                <th>Адрес для доставки</th>
                 <th>Действия</th>
             </tr>
             @foreach ($orders as $order)
@@ -23,6 +24,7 @@
                     <td>{{ $order->user->surname }} {{ $order->user->name }}</td>
                     <td>{{ $order->user->email }}</td>
                     <td>{{ $order->order_status }}</td>
+                    <td>{{ $order->city }}, {{ $order->street }}, {{ $order->house }} {{ $order->apartment }}</td>
                     <td>
                         <a href="{{ route('admin-order-canceled', $order) }}" class="btn btn-danger">Отклонить</a>
                         <a href="{{ route('admin-order-success', $order) }}" class="btn btn-danger">Завершить</a>

@@ -33,7 +33,7 @@ class PageController extends Controller
         return view('index', [
             'products' => $query->paginate(5),
             'categories' => Categories::all(),
-            'reviews' => Review::all()
+            'reviews' => Review::query()->orderByDesc('id')->limit(3)->get()
         ]);
     }
 
@@ -78,5 +78,21 @@ class PageController extends Controller
     public function lkb()
     {
         return view('lkb');
+    }
+
+    public function products(Request $request)
+    {
+        $products = Product::query()->orderByDesc('id')->get();
+
+        if ($request->get('category_id')) {
+            $products = Product::query()->where('category_id', '=', $request->get('category_id'))->orderByDesc('id')->get();
+        }
+
+        return view('products', ['products' => $products, 'categories' => Categories::all()]);
+    }
+
+    public function reviews()
+    {
+        return view('reviews', ['reviews' => Review::query()->orderByDesc('id')->get()]);
     }
 }

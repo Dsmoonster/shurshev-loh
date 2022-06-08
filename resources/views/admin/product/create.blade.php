@@ -1,31 +1,41 @@
 @extends('layouts/main')
 @section('content')
-<main>
-    <div class="forma_reg">
-        <div class="regsiter">
-            <h2>Добавление продуктов</h2>
-            <form method="POST" name="reg" enctype="multipart/form-data">
-                @csrf
-                <input type="text" name="name" placeholder="Название продукта" value="{{ old('name') }}"><br>
-                <input type="text" name="price" placeholder="Цена" value="{{ old('price') }}"><br>
-                <textarea name="content" id="" cols="30" rows="10" placeholder="Характеристики">{{ old('content') }}</textarea>
-                <select name="category_id">
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}" @if($category->id == old('category_id')) selected @endif>{{ $category->name }}</option>
-                    @endforeach
-                </select>
-                <input class="sub_bt" type="file" name="files[]" multiple>
-                <input class="sub_bt" type="submit" name="reg" value="Создать">
-                @if($errors->any())
-                    <p>Ошибки валидации:</p>
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
+    <main>
+        <style>
+            .regsiter form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+        <div class="forma_reg">
+            <div class="regsiter">
+                <h2>Добавление продуктов</h2>
+                <form method="POST" name="reg" enctype="multipart/form-data">
+                    @csrf
+                    <input type="text" name="name" placeholder="Название продукта" value="{{ old('name') }}"><br>
+                    <input type="text" name="price" placeholder="Цена" value="{{ old('price') }}"><br>
+                    <textarea name="content" id="" cols="30" rows="10"
+                              placeholder="Характеристики">{{ old('content') }}</textarea>
+                    <select name="category_id">
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}"
+                                    @if($category->id == old('category_id')) selected @endif>{{ $category->name }}</option>
                         @endforeach
-                    </ul>
-                @endif
-            </form>
+                    </select>
+                    <input class="sub_bt" type="file" name="files[]" multiple>
+                    <input class="sub_bt" type="submit" name="reg" value="Создать">
+                    @if($errors->any())
+                        <p>Ошибки валидации:</p>
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </form>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
 @endsection
