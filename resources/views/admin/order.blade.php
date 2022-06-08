@@ -24,6 +24,8 @@
                         <td>{{ $order->city }}, {{ $order->street }}, {{ $order->house }} {{ '(' . $order->apartment . ' квартира)' }}</td>
                         <td>
                             <a href="{{ route('admin-order-canceled', $order) }}" class="btn btn-danger">Отклонить</a>
+                            <a href="{{ route('admin-order-build', $order) }}" class="btn btn-danger">Собирается</a>
+                            <a href="{{ route('admin-order-delivered', $order) }}" class="btn btn-danger">Отправлен</a>
                             <a href="{{ route('admin-order-success', $order) }}" class="btn btn-danger">Завершить</a>
                         </td>
                     </tr>

@@ -71,6 +71,8 @@ Route::controller(OrderController::class)->group(function () {
 
     Route::get('/order/{order}/success', 'successOrder')->name('admin-order-success');
     Route::get('/order/{order}/canceled', 'canceledOrder')->name('admin-order-canceled');
+    Route::get('/order/{order}/build', 'buildOrder')->name('admin-order-build');
+    Route::get('/order/{order}/delivered', 'deliveredOrder')->name('admin-order-delivered');
 });
 
 Route::controller(ReviewController::class)->group(function () {

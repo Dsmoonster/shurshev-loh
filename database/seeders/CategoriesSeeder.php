@@ -15,10 +15,21 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 1; $i <= 20; $i++) {
+        for ($i = 1; $i <= 15; $i++) {
+
+            $index = $i < 10 ? "0" . $i : $i;
+
             Categories::query()->create([
-               'name' => 'Категория ' . $i
+                'name' => "ВАЗ 21{$index}"
             ]);
         }
+
+        Categories::query()->create([
+            'name' => 'Lada Priora'
+        ]);
+
+        Categories::query()->create([
+            'name' => 'Lada Granta (до 2018)'
+        ]);
     }
 }

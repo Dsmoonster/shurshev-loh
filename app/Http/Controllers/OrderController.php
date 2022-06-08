@@ -69,4 +69,22 @@ class OrderController extends Controller
 
         return redirect(route('admin-orders'));
     }
+
+    public function buildOrder(Order $order)
+    {
+        $order->update([
+            'status' => 'build',
+        ]);
+
+        return redirect(route('admin-orders'));
+    }
+
+    public function deliveredOrder(Order $order)
+    {
+        $order->update([
+            'status' => 'delivered',
+        ]);
+
+        return redirect(route('admin-orders'));
+    }
 }

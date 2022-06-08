@@ -35,6 +35,14 @@ class Order extends Model
             case 'success':
                 $status = 'Завершен';
                 break;
+
+            case 'build':
+                $status = 'Собирается';
+                break;
+
+            case 'delivered':
+                $status = 'Отправлен';
+                break;
             default:
                 $status = 'В обработке';
         }

@@ -1,18 +1,28 @@
 @extends('layouts/main')
 @section('content')
     <main>
+        <style>
+            .regsiter form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
         <div class="forma_reg">
             <div class="regsiter">
                 <h2>Добавление продуктов</h2>
                 <form method="POST" name="reg" enctype="multipart/form-data">
                     @csrf
                     <input type="text" name="name" placeholder="Название продукта"
-                        value="{{ old('name', $product->name) }}"><br>
+                           value="{{ old('name', $product->name) }}"><br>
                     <input type="text" name="price" placeholder="Цена" value="{{ old('price', $product->price) }}"><br>
-                    <textarea name="content" id="" cols="30" rows="10" placeholder="Характеристики">{{ old('content', $product->content) }}</textarea>
+                    <textarea name="content" id="" cols="30" rows="10"
+                              placeholder="Характеристики">{{ old('content', $product->content) }}</textarea>
                     <select name="category_id">
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}" @if ($category->id == $product->category_id) selected @endif>
+                            <option value="{{ $category->id }}"
+                                    @if ($category->id == $product->category_id) selected @endif>
                                 {{ $category->name }}</option>
                         @endforeach
                     </select>
