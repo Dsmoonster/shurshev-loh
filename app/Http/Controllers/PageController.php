@@ -84,8 +84,8 @@ class PageController extends Controller
     {
         $products = Product::query()->orderByDesc('id')->get();
 
-        if ($request->get('category_id')) {
-            $products = Product::query()->where('category_id', '=', $request->get('category_id'))->orderByDesc('id')->get();
+        if ($request->get('category')) {
+            $products = Product::query()->where('category', '=', $request->get('category'))->orderByDesc('id')->get();
         }
 
         return view('products', ['products' => $products, 'categories' => Categories::all()]);
