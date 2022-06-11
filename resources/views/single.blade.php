@@ -134,13 +134,6 @@
 
                 </div>
             </div>
-{{--
-            <div class="photo">
-
-            </div>
-            <div class="photo_block">
-                <img src="{{ $product->image_path }}" width="500px" height="400px">
-            </div> --}}
 
             <div class="info_block_tovar">
                 <h1>От {{ $product->price }} ₽</h1><br>
@@ -167,13 +160,6 @@
             </div>
 
         </div>
-        <!-- <div class="info_object">
-                                    <div class="bt">
-                                        <button>О товаре</button>
-                                        <button>Отзывы</button>
-                                        <button>Доставка и оплата</button>
-                                    </div>
-                                </div> -->
 
         <!-- Initialize Swiper -->
         <script defer>

@@ -8,8 +8,6 @@
             </a>
             <div class="time">
                 <p>8(999) 164 3992</p><br>
-                <p>Режим работы<br>
-                    пн-вс 7:00 - 23:00 мск</p>
             </div>
             <div class="korzina">
                 <a href="{{ route('basket') }}"><img src="{{ asset('img/icons8-корзина-48 1.png') }}"></a>

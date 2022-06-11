@@ -33,6 +33,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/lkb', 'lkb')->name('lkb');
     Route::get('/products/all', 'products')->name('products');
     Route::get('/reviews/all', 'reviews')->name('reviews');
+    Route::get('/policy', 'policy')->name('policy');
 });
 
 Route::controller(AuthController::class)->group(function () {

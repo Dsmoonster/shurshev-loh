@@ -1082,3 +1082,8 @@ main {
 .justify-center {
     justify-content: center;
 }
+
+input[type='checkbox'] {
+    height: auto;
+    width: auto;
+}

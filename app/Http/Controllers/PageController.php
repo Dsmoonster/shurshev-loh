@@ -57,6 +57,11 @@ class PageController extends Controller
         return view('oplata');
     }
 
+    public function policy()
+    {
+        return view('policy');
+    }
+
     public function adress()
     {
         $orders = Order::query()->where('user_id', Auth::user()->id)->get();
