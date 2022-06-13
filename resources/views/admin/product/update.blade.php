@@ -11,7 +11,7 @@
         </style>
         <div class="forma_reg">
             <div class="regsiter">
-                <h2>Добавление продуктов</h2>
+                <h2>Редактирование продукта: {{ $product->name }}</h2>
                 <form method="POST" name="reg" enctype="multipart/form-data">
                     @csrf
                     <input type="text" name="name" placeholder="Название продукта"
@@ -27,7 +27,7 @@
                         @endforeach
                     </select>
                     <input class="sub_bt" type="file" name="files[]" multiple>
-                    <input class="sub_bt" type="submit" name="reg" value="Создать">
+                    <input class="sub_bt" type="submit" name="reg" value="Сохранить">
                     @if ($errors->any())
                         <p>Ошибки валидации:</p>
                         <ul>
