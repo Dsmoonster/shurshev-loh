@@ -67,7 +67,7 @@
             <h1>{{ $product->price }}</h1>
             <p>{{ $product->name }}</p>
             <div class="info_tovar">
-                <p class="code">Код товара:<br>{{ $product->id }}</p>
+                <p class="code">Код товара: №{{ $product->id }}</p>
                 <a href="{{ route('product.single', $product) }}" class="bt_load">Подробнее</a>
             </div>
         </div>
@@ -76,6 +76,10 @@
             .info_tovar {
                 flex-direction: column;
                 padding: 10px;
+            }
+
+            .tovar>p {
+                margin-bottom: 15px;
             }
 
             .tovar .info_tovar {
@@ -99,7 +103,7 @@
 
     </div>
 
-    <div class="flex align-center justify-center">
+    <div class="flex align-center justify-center my-4">
         <a class="button edit_button" href="{{ route('products') }}">Показать все</a>
     </div>
 
@@ -171,4 +175,10 @@
         </div>
     </div>
 </main>
+
+<style>
+    .my-4 {
+        margin: 40px 0;
+    }
+</style>
 @endsection
