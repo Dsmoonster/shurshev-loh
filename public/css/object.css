@@ -178,9 +178,7 @@ header a{
     width: 200x;
 }
 .info_block_tovar{
-    /* border: 1px solid black; */
-    width: 100x;
-    height: 500px;
+    max-width: 300px;
     display: table-column;
 }
 .pusto_block{
@@ -200,6 +198,11 @@ header a{
     max-width: 1050px;
     /* border: 1px solid black; */
     height: 100px;
+}
+
+.info_block_tovar .delete_button {
+    margin: 0;
+    margin-top: 10px;
 }
 
 

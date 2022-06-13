@@ -64,7 +64,7 @@
         @forelse($products as $product)
         <div class="tovar">
             <img src="{{ $product->image_path }}" width="278px" height="280px">
-            <h1>{{ $product->price }}</h1>
+            <h1>{{ $product->price }} ₽</h1>
             <p>{{ $product->name }}</p>
             <div class="info_tovar">
                 <p class="code">Код товара: №{{ $product->id }}</p>
@@ -84,6 +84,7 @@
 
             .tovar .info_tovar {
                 margin-top: auto;
+                gap: 10px;
             }
 
             .info_tovar .bt_load {
